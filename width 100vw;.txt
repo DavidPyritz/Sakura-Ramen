@@ -1,4 +1,0 @@
-width: 100vw;
-height: 100vh;
-
-<img class="atf-image" src="./Sakura Ramen/assets/img/3_section_our_menu/JPG/section_our_menu_bg.jpg
