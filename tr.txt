@@ -1,0 +1,21 @@
+<tr>
+                <td>2 TL</td>
+                <td>Zucker</td>
+            </tr>
+            <tr>
+                <td>Menge</td>
+                <td>Name</td>
+            </tr>       
+            <tr>
+                <td>1 Prise</td>
+                <td>Salz</td>
+            </tr>
+            <tr>
+                <td>250 ml</td>
+                <td>Milch</td>
+            </tr>
+            <tr>
+                <td>2 EL</td>
+                <td>neutrales Öl</td>
+            </tr>`        
+        }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    img {
+        width: 100%;
+    }
+</style>
+
+<script>
+    let images = ['./img/aottest.jpg', './img/aot2.jpg', './img/aot2test.jpg'];
+    let currentImage = 0;
+
+    function start() {
+        showImage(currentImage);
+        currentImage++;
+
+        if (currentImage == 5) {
+            currentImage = 0;
+        }
+
+        setTimeout(start, 1000);
+
+    }
+    
+
+    function showImage(i) {                                //i steht für showImage(2) oder showImage(3) oder showImage(4)
+        document.getElementById('image').scr = images[i];
+    }
+
+</script>
+
+<body>
+    <button onclick="showImage(2)">2</button>
+    <button onclick="showImage(3)">3</button>
+    <button onclick="showImage(4)">4</button>
+
+    <img id="image" src="./img/aottest.jpg">
+
+</body>
+
+</html>
+
+// let images = ['./img/harbour-city-3928590_1280.jpg', './img/the-shallow-sea-2252940_1280.jpg',
+'./img/coast-2253105_1280.jpg', '4', '5'];
+
+'4.webp', '5.webp'

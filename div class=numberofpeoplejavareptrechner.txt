@@ -1,0 +1,65 @@
+    <div class="numberofpeople">
+        <label>Number of cakes:
+            <input type="number" id="cakes" min="1" value="1">
+        </label>
+        
+        <div id="results"></div>
+
+    </div>
+    <table>
+        <table>
+            <tbody>
+                <tr id="Menge2">
+                <tr>
+                    <td>Menge1</td>
+                </tr>
+                <tr>
+                    <td>Menge2</td>
+                </tr>
+                <tr>
+                    <td>Menge3</td>
+                </tr>
+                <tr>
+                    <td>Menge4</td>
+                </tr>
+            </tbody>
+        </table>
+    </table>
+    <div class="function1">
+        <script>
+
+            function recipeCalculator(recipe, inputField, updater) {
+                inputField.addEventListener("change", function () {
+                    var factor = this.value / recipe.baseAmount;
+                    var newRecipe = {};
+                    newRecipe.baseAmount = this.value;
+                    newRecipe.ingredients = recipe.ingredients.map(function (ingredient) {
+                        return {
+                            name: ingredient.name,
+                            amount: ingredient.amount * factor
+                        };
+                    });
+                    updater(newRecipe);
+                });
+            }
+
+            var recipe = {
+                baseAmount: 1,
+                ingredients: [{
+                    name: "Sugar (in grams)",
+                    amount: 300
+                }, {
+                    name: "Salt (in grams)",
+                    amount: 2
+                }]
+            };
+
+            function updateResults(newRecipe) {
+                document.getElementById("results").innerHTML = newRecipe.ingredients.reduce(function (prevValue, ingredient) {
+                    return prevValue + ingredient.name + "<br>" + ingredient.amount + "<br><br>";
+                }, "");
+            }
+
+            recipeCalculator(recipe, document.getElementById("cakes"), updateResults);
+            // Show initial recipe
+            updateResults(recipe);

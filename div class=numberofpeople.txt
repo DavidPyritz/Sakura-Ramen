@@ -1,0 +1,50 @@
+    <div class="numberofpeople">
+        <h2>Zutaten für</h2>
+
+        <input id="namefield" placeholder="1-4">
+        <button onclick="greetFromTextField()">Portionen</button>
+
+        <p id="Menge1">
+        </p>
+
+
+
+    </div>
+    <table>
+        <table>
+            <tbody>
+                <tr id="Menge2">
+                <tr>
+                    <td>Menge1</td>
+                </tr>
+                <tr>
+                    <td>Menge2</td>
+                </tr>
+                <tr>
+                    <td>Menge3</td>
+                </tr>
+                <tr>
+                    <td>Menge4</td>
+                </tr>
+            </tbody>
+        </table>
+    </table>
+    <div class="function1">
+        <script>
+            function greetFromTextField() {
+                let name = document.getElementById('namefield').value;
+                greet(name);
+            }
+
+            function greet(menge2) {
+                document.getElementById('Menge2').innerHTML = `${menge2}
+                <tr>
+                    <td>Menge4</td>
+                    <td>Menge5</td>
+                    <td>Menge9</td>
+                    <td>Menge7</td>
+                </tr>                           
+                `;
+
+            }
+        </script>

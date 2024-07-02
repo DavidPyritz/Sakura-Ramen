@@ -1,0 +1,30 @@
+Moin David ... ich würde das Tel-img und das <a>Tag in einen <div>-container packen dem eine display: flex geben, entsprechend ausrichten und hintergrundfarbe dann das rot geben ... einfach mal ausprobieren
+
+BOT
+ — gestern um 09:35 Uhr
+Moin,
+sagt es schon sehr gut, das Problem ist das a tags ein inline element sind, du kannst bei diesen display:block oder display flex schrieben und dann kannst du denen auch höhe und breite geben und damit wie einen button designen.
+beide Wege führen zum Ziel ;-)
+
+
+
+
+ <img class="atf-image2" src="./img/phone.png"> href="tel:0176 54564534"</a><br>
+  <h2 class="atf-image2"><a href="./img/phone.png" class="order-btn">Pick your noodle</a></h2>
+
+
+<th abbr="headline5">Tonkotsu Ramen</th>
+
+
+
+display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+
+display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
